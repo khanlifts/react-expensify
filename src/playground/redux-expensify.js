@@ -138,7 +138,7 @@ const getVisibleExpenses = (expenses, {text, sortBy, startDate, endDate}) => {
       return a.amount < b.amount ? 1 : -1;
     }
   });
-}
+};
 
 // Store Creation
 const store = createStore(
@@ -158,9 +158,9 @@ store.subscribe(() => {
 const expenseOne = store.dispatch(addExpense(
   { description: 'Rent', amount: 100, createdAt: -21000,  }
 ));
-const expenseTwo = store.dispatch(addExpense(
-  { description: 'Fitness', amount: 2000, createdAt: -1000 }
-));
+// const expenseTwo = store.dispatch(addExpense(
+//   { description: 'Fitness', amount: 2000, createdAt: -1000 }
+// ));
 //
 // store.dispatch(removeExpense({ id: expenseOne.expense.id }));
 // store.dispatch(editExpense( expenseTwo.expense.id, { amount: 500 }));
