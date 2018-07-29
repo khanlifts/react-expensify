@@ -115,8 +115,8 @@ const editExpense = (id, updates) => ({
 //  return true if all values of startDateMatch, endDateMatch, textMatch are true
 
 //  now sort this filtered array
-//  If sortBy is set to 'date' sort by createdAt ascending
-//  If sortBy is set to 'amount' sort by amount ascending
+//  If sortBy is set to 'date' sort by createdAt descending
+//  If sortBy is set to 'amount' sort by amount descending
 
 
 // Store Creation
