@@ -9,8 +9,8 @@ const Header = () => (
       set exact={true} to avoid class being appended to home on every page
     */}
     <NavLink to="/" activeClassName="is-active" exact={true}>Home</NavLink><br/>
-    <NavLink to="/create" activeClassName="is-active">Create Page</NavLink><br/>
-    <NavLink to="/help" activeClassName="is-active">Help Page</NavLink>
+    <NavLink to="/create" activeClassName="is-active">Create Expense</NavLink><br/>
+    <NavLink to="/help" activeClassName="is-active">Help</NavLink>
   </header>
 );
 
