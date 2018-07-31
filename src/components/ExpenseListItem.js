@@ -1,21 +1,19 @@
 import React from 'react';
-import { removeExpense } from '../actions/expenses';
-import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
-const ExpenseListItem = ({dispatch, id, description, amount, createdAt}) => {
+const ExpenseListItem = ({id, description, note, amount, createdAt}) => {
   return (
     <div>
-      <h3>{description}</h3>
+      <NavLink to={`/edit/${id}`} activeClassName="is-active">
+        <h3>{description}</h3>
+      </NavLink><br/>
       <p>{amount} - {createdAt}</p>
-      <button
-        onClick={() => {
-          dispatch(removeExpense({id}))
-        }}
-      >
-      Remove</button>
+      <p>{note}</p>
     </div>
   );
 }
+
+// add Link with id to description in h3
 
 {/* ExpenseListItem without destructuring parameters
 
@@ -36,4 +34,4 @@ const ExpenseListItem = (props) => {
 }
 */}
 
-export default connect()(ExpenseListItem);
+export default ExpenseListItem;
