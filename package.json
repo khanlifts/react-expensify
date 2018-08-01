@@ -30,12 +30,14 @@
   },
   "scripts": {
     "serve": "live-server public/",
-    "build": "webpack --watch",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server"
   },
   "devDependencies": {
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "node-sass": "^4.9.2",
     "sass-loader": "^6.0.7"
   }

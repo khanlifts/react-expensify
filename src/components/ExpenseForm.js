@@ -90,23 +90,3 @@ export default class ExpenseForm extends React.Component {
     );
   }
 }
-
-// Form
-//  input, type text, placeholder: Description, autofocus
-//  input, type number, placeholder: Amount
-//  textarea, placeholder: Add a note for your expenses (optional)
-//  button Add Expense
-
-// state object
-//   description: ''
-
-// method onDescriptionChange takes an event e
-//   constant description is assigned target value
-//   setState description constant to description key in state object
-
-// hook up text input to onChange onDescriptionChange
-//   set value to state value
-
-// setup note state
-//  add note: '' to state object
-// setup onChange and value for textarea
