@@ -13,25 +13,4 @@ const ExpenseListItem = ({id, description, note, amount, createdAt}) => {
   );
 }
 
-// add Link with id to description in h3
-
-{/* ExpenseListItem without destructuring parameters
-
-const ExpenseListItem = (props) => {
-  const id = props.id;
-  return (
-    <div>
-      <h3>{props.description}</h3>
-      <p>{props.amount} - {props.createdAt}</p>
-      <button
-        onClick={() => {
-          props.dispatch(removeExpense({id}))
-        }}
-      >
-      Remove</button>
-    </div>
-  );
-}
-*/}
-
 export default ExpenseListItem;

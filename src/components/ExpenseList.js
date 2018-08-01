@@ -14,7 +14,6 @@ const ExpenseList = (props) => (
         />
       ))
     }
-    {props.expenses.length}
   </div>
 );
 

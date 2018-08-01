@@ -32,13 +32,3 @@ const mapStateToProps = (state, props) => {
 }
 
 export default connect(mapStateToProps)(EditExpensePage);
-
-// 1. connect component EditExpensePage to redux store
-// 2. mapStateToProps takes state and props
-//      return object, with expense as key and value state expenses array
-//      find and return all items in this array that match the expense id
-//      and the props match params id
-
-// 1. import ExpenseForm
-// 2. render ExpenseForm
-// 3. add onSubmit handler to log the expense passed to it
