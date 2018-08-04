@@ -45,6 +45,6 @@ test('should return end date from setEndDate action', () => {
   const action = setEndDate(moment(4000));
   expect(action).toEqual({
     type: 'SET_END_DATE',
-    endDate: moment(4000) 
+    endDate: moment(4000)
   });
 });
