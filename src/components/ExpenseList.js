@@ -5,7 +5,7 @@ import selectExpenses from '../selectors/expenses';
 import getExpensesTotal from '../selectors/expenses-total';
 import numeral from 'numeral';
 
-const ExpenseList = (props) => {
+export const ExpenseList = (props) => {
   const expensesTotal = numeral(getExpensesTotal(props.expenses)).format('$0,0.00');
   return (
     <div>

@@ -10,7 +10,6 @@ test('should setup default expense value', () => {
 });
 
 // REMOVE_EXPENSE
-
 test('should remove expense by id', () => {
   const action = {
     type: 'REMOVE_EXPENSE',
