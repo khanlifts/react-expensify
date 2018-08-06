@@ -12,12 +12,16 @@ export const ExpenseList = (props) => {
       <h1>Expense List</h1>
       {<p>Your total of expenses is {expensesTotal}</p>}
       {
-        props.expenses.map((expense, index) => (
-          <ExpenseListItem
-            key={expense.id}
-            {...expense}
-          />
-        ))
+        props.expenses.length === 0 ? (
+          <p>No expenses found.</p>
+        ) : (
+          props.expenses.map((expense, index) => (
+            <ExpenseListItem
+              key={expense.id}
+              {...expense}
+            />
+          ))
+        )
       }
     </div>
   );
