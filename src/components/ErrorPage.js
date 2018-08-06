@@ -1,8 +1,9 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const ErrorPage = () => (
   <div>
-    404 - <Link to="/">Go home</Link>
+    404 - <NavLink to="/">Go home</NavLink>
   </div>
 );
 

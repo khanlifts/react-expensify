@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpenseListItem 1`] = `
+<div>
+  <NavLink
+    activeClassName="is-active"
+    aria-current="page"
+    to="/edit/1"
+  >
+    <h3>
+      Gum
+    </h3>
+  </NavLink>
+  <br />
+  <p>
+    $1.95
+     - 
+    1. Jan. 1970 01:00
+  </p>
+  <p />
+</div>
+`;
