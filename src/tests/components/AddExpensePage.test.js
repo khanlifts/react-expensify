@@ -3,26 +3,24 @@ import { shallow } from 'enzyme';
 import { AddExpensePage } from '../../components/AddExpensePage';
 import expenses from '../fixtures/expenses';
 
-test('should render AddExpensePage correctly', () => {
-  const onSubmitSpy = jest.fn();
-  const history = { push: jest.fn() };
-  const wrapper = shallow(<AddExpensePage onSubmit={onSubmitSpy} history={history}/>);
-  expect(wrapper).toMatchSnapshot();
-});
+let addExpense, history, wrapper;
 
-// test should handle onSubmit
-  // define a spy function
-  // define history object
-  // get a wrapper of AddExpensePage component with items above
-  // find and call ExpenseForm prop onSubmit. Pass in second fixture expense
-  // expect history push to have been last called with the root directory
-  // expect onSubmit to have been last called with second fixture expense
+describe('Tests for AddExpensePage', () => {
 
-test('should handle onSubmit', () => {
-  const onSubmitSpy = jest.fn();
-  const history = { push: jest.fn() };
-  const wrapper = shallow(<AddExpensePage onSubmit={onSubmitSpy} history={history}/>);
-  wrapper.find('ExpenseForm').prop('onSubmit')(expenses[1]);
-  expect(history.push).toHaveBeenLastCalledWith('/');
-  expect(onSubmitSpy).toHaveBeenLastCalledWith(expenses[1]);
+  beforeEach(() => {
+    addExpense = jest.fn();
+    history = { push: jest.fn() };
+    wrapper = shallow(<AddExpensePage addExpense={addExpense} history={history}/>);
+  });
+
+  test('should render AddExpensePage correctly', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test('should handle onSubmit', () => {
+    wrapper.find('ExpenseForm').prop('onSubmit')(expenses[1]);
+    expect(history.push).toHaveBeenLastCalledWith('/');
+    expect(addExpense).toHaveBeenLastCalledWith(expenses[1]);
+  });
+
 });
