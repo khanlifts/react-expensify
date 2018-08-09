@@ -7,6 +7,4 @@ test('should render Header correctly', () => {
   // this works because we configured jest.config.json to snapshotSerializers
   // to use enzyme-to-json/serializer
   expect(wrapper).toMatchSnapshot();
-
-  // expect(wrapper.find('h1').text()).toBe('Expensify');
 });
