@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
-import { addExpense } from '../actions/expenses';
+import { startAddExpense } from '../actions/expenses';
 
 export class AddExpensePage extends React.Component {
   onSubmit = (expense) => {
-    this.props.addExpense(expense);
+    this.props.startAddExpense(expense);
     this.props.history.push('/');
   };
   render() {
@@ -23,7 +23,7 @@ export class AddExpensePage extends React.Component {
 // mapDispatchToProps is a way to return your dispatcher functions allowing
 // you to get them out of your components (in our case for testing purposes)
 const mapDispatchToProps = (dispatch) => ({
-  addExpense: (expense) => dispatch(addExpense(expense))
+  startAddExpense: (expense) => dispatch(startAddExpense(expense))
 });
 
 export default connect(undefined, mapDispatchToProps)(AddExpensePage);
