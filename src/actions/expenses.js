@@ -10,18 +10,16 @@ export const addExpense = (expense = {}) => ({
   expense
 });
 
-// parameter is expenseData or empty object
+// async action creator
 export const startAddExpense = (expenseData = {}) => {
   // return a function with parameter dispatch
   return (dispatch) => {
     // data setup:
-    // get all data and set defaults
     const { description = '', note = '', amount = 0, createdAt = 0 } = expenseData;
-    // create object with data
     const expense = { description, note, amount, createdAt };
     // push object to database on child expenses then dispatch addExpense
     // to update redux store
-    database.ref('expenses').push(expense).then((ref) => {
+    return database.ref('expenses').push(expense).then((ref) => {
       dispatch(addExpense({
         id: ref.key,
         ...expense
